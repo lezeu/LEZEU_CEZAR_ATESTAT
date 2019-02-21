@@ -1,0 +1,26 @@
+﻿<Page x:Class="Lezeu_Matei_Atestat.Start"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Lezeu_Matei_Atestat"
+      mc:Ignorable="d" 
+      d:DesignHeight="1000" d:DesignWidth="1200"
+      Title="Start" Background="Black">
+
+    <Grid>
+        <Canvas x:Name="cv1" HorizontalAlignment="Left" Height="1000" Visibility="Visible" VerticalAlignment="Top" Width="1200">
+            <Image Height="1000" Width="1200" Source="/res/clsroom.png"/>
+            <Image x:Name="eu" Height="82" Canvas.Left="128" Canvas.Top="466" Width="102" Source="/res/cezarel.png"/>
+            <Image x:Name="eu_Copy" Height="92" Canvas.Left="470" Canvas.Top="828" Width="186" Source="res/prof.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+                
+            </Image>
+        </Canvas>
+        <Canvas x:Name="cv2" Visibility="Hidden" HorizontalAlignment="Left" Background="Transparent" Height="1000" VerticalAlignment="Top" Width="1200">
+            <Image x:Name="img" Height="1000"  Width="1200" />
+
+            <Label x:Name="Dialog" Content="" FontSize="40" VerticalContentAlignment="Center"   Foreground="White" Canvas.Top="852" Width="1200" Height="148"/>
+        </Canvas>
+
+    </Grid>
+</Page>
