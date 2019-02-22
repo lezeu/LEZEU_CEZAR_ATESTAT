@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="1000" Width="1200" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Canvas HorizontalAlignment="Left" Height="990" VerticalAlignment="Top" Width="1190">
-        <Frame x:Name="frame" Visibility="Visible" Height="994" Width="1180"/>
+        <Frame x:Name="frame" Visibility="Visible" Height="994" Width="1180" NavigationUIVisibility="Hidden"/>
      
     </Canvas>
 

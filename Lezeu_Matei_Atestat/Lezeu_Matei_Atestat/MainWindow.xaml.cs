@@ -23,11 +23,25 @@ namespace Lezeu_Matei_Atestat
     public partial class MainWindow : Window
     {
         DispatcherTimer timer = new DispatcherTimer();
+        AdditionalCode additionalCode = new AdditionalCode();
         public MainWindow()
         {
             InitializeComponent();
-            frame.Content = new Start();
+            timer.Interval = TimeSpan.FromMilliseconds(1);
+            timer.Tick += new EventHandler(tick);
+            timer.Start();
+            frame.Content = new Start(additionalCode);
         }
-        
+        public void tick(object sender , EventArgs e)
+        {
+            if(additionalCode.update == true)
+            {
+                if(additionalCode.lvl ==1)
+                {
+                    frame.Content = new Lvl1() ;
+                    additionalCode.update = false;
+                }
+            }
+        }
     }
 }

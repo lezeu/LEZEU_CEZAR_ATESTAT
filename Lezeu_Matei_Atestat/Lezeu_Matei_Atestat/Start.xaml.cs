@@ -25,7 +25,8 @@ namespace Lezeu_Matei_Atestat
         DispatcherTimer timer = new DispatcherTimer();
         DispatcherTimer timerAnimatie = new DispatcherTimer();
         DispatcherTimer dlgTimer = new DispatcherTimer();
-        public Start()
+        AdditionalCode additional;
+        public Start(AdditionalCode adc)
         {
             InitializeComponent();
             dlgTimer.Interval = TimeSpan.FromMilliseconds(30);
@@ -37,7 +38,7 @@ namespace Lezeu_Matei_Atestat
             timer.Interval = TimeSpan.FromSeconds(3);
             timer.Tick += new EventHandler(tm_tick);
 
-            QuestionARRAY = File.ReadAllLines(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/res/Dialog.txt");
+            QuestionARRAY = File.ReadAllLines(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/res/bubbleDialog.txt");
             cv2.Visibility = Visibility.Visible;
             timer.Start();
             dlgTimer.Start();
@@ -45,58 +46,79 @@ namespace Lezeu_Matei_Atestat
             initpozI = Canvas.GetTop(eu);
             initpozJ = Canvas.GetLeft(eu);
 
-
+            additional = adc;
         }
+
         int p = 0;
         string[] QuestionARRAY;
         string[] literaculitera = new string[100];
         int lft = 0;
+        bool dlg = false;
         public void tm_tick(object sender, EventArgs e)
         {
-
-            init();
-            if (nrStr % 2 == 0)
+            if (dlg == false)
             {
-                BitmapImage bmp = new BitmapImage();
-                bmp.BeginInit();
-                if (lft % 2 == 0)
-                    bmp.UriSource = new Uri(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/res/cezarel1.png", UriKind.RelativeOrAbsolute);
+                init();
+                p = 0;
+                if (nrStr < QuestionARRAY.Length - 1)
+                {
+                    nrStr++;
+                    dlgTimer.Start();
+                }
                 else
-                    bmp.UriSource = new Uri(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/res/cezarel.png", UriKind.RelativeOrAbsolute);
-                lft++;
-                cv1.Visibility = Visibility.Hidden;
-                bmp.EndInit();
-                img.Height = 800;
-                img.Source = bmp;
+                {
+
+                    dlgTimer.Stop();
+                    QuestionARRAY = File.ReadAllLines(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/res/Dialog.txt");
+                    dlg = true;
+                    nrStr = 0;
+                }
             }
-            else
+            if (dlg == true)
             {
-                BitmapImage bmp = new BitmapImage();
-                bmp.BeginInit();
-                bmp.UriSource = new Uri(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/res/prof.jpg", UriKind.RelativeOrAbsolute);
+                init();
+                if (nrStr % 2 == 0)
+                {
+                    BitmapImage bmp = new BitmapImage();
+                    bmp.BeginInit();
+                    if (lft % 2 == 0)
+                        bmp.UriSource = new Uri(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/res/cezarel1.png", UriKind.RelativeOrAbsolute);
+                    else
+                        bmp.UriSource = new Uri(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/res/cezarel.png", UriKind.RelativeOrAbsolute);
+                    lft++;
+                    cv1.Visibility = Visibility.Hidden;
+                    bmp.EndInit();
+                    img.Height = 800;
+                    img.Source = bmp;
+                }
+                else
+                {
+                    BitmapImage bmp = new BitmapImage();
+                    bmp.BeginInit();
+                    bmp.UriSource = new Uri(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/res/prof.jpg", UriKind.RelativeOrAbsolute);
 
-                bmp.EndInit();
-                img.Height = 1000;
-                img.Source = bmp;
+                    bmp.EndInit();
+                    img.Height = 1000;
+                    img.Source = bmp;
+                }
+                p = 0;
+
+
+                if (nrStr < QuestionARRAY.Length - 1)
+                {
+                    nrStr++;
+                    dlgTimer.Start();
+                }
+                else
+                {
+                    timer.Stop();
+                    dlgTimer.Stop();
+
+                    cv1.Visibility = Visibility.Visible;
+                    cv2.Visibility = Visibility.Hidden;
+                    timerAnimatie.Start();
+                }
             }
-            p = 0;
-
-
-            if (nrStr < QuestionARRAY.Length - 1)
-            {
-                nrStr++;
-                dlgTimer.Start();
-            }
-            else
-            {
-                timer.Stop();
-                dlgTimer.Stop();
-
-                cv1.Visibility = Visibility.Visible;
-                cv2.Visibility = Visibility.Hidden;
-                timerAnimatie.Start();
-            }
-
         }
         double initpozI = 0;
         double initpozJ = 0;
@@ -133,13 +155,24 @@ namespace Lezeu_Matei_Atestat
                 {
                     Canvas.SetLeft(eu, Canvas.GetLeft(eu) - 2);
                 }
+                else
+                {
+                    additional.lvl = 1;
+                    additional.update = true;
+                }
             }
 
         }
         public void dialog_tick(object sender, EventArgs e)
         {
-
-            Dialog.Content += literaculitera[p];
+            if (dlg == false)
+            {
+                bubble.Text += literaculitera[p];
+            }
+            if (dlg == true)
+            {
+                Dialog.Content += literaculitera[p];
+            }
             if (p < literaculitera.Length)
                 p++;
             else
@@ -162,7 +195,10 @@ namespace Lezeu_Matei_Atestat
                 literaculitera[p] += c;
                 p++;
             }
-            Dialog.Content = "";
+            if (dlg == true)
+                Dialog.Content = "";
+            if (dlg == false)
+                bubble.Text = "";
         }
     }
 }
