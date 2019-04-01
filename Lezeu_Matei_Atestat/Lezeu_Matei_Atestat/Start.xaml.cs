@@ -82,9 +82,9 @@ namespace Lezeu_Matei_Atestat
                     BitmapImage bmp = new BitmapImage();
                     bmp.BeginInit();
                     if (lft % 2 == 0)
-                        bmp.UriSource = new Uri(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/res/cezarel1.png", UriKind.RelativeOrAbsolute);
+                        bmp.UriSource = new Uri(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/res/cezarel1.jfif", UriKind.RelativeOrAbsolute);
                     else
-                        bmp.UriSource = new Uri(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/res/cezarel.png", UriKind.RelativeOrAbsolute);
+                        bmp.UriSource = new Uri(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/res/cezarel.jfif", UriKind.RelativeOrAbsolute);
                     lft++;
                     cv1.Visibility = Visibility.Hidden;
                     bmp.EndInit();
@@ -145,7 +145,7 @@ namespace Lezeu_Matei_Atestat
                     initpozJ = Canvas.GetLeft(eu);
                     BitmapImage bmp = new BitmapImage();
                     bmp.BeginInit();
-                    bmp.UriSource = new Uri(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/res/cezarel1.png", UriKind.RelativeOrAbsolute);
+                    bmp.UriSource = new Uri(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/res/cezarel1.jfif", UriKind.RelativeOrAbsolute);
                     bmp.EndInit();
                     eu.Source = bmp;
                 }

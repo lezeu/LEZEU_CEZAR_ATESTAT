@@ -121,13 +121,13 @@
     <Resource Include="res\clsroom.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="res\cezarel.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="res\cezarel1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="res\bubbleDialog.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\omulet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="res\cezarel1.jfif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
