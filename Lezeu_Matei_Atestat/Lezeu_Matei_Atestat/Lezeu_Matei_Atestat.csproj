@@ -60,6 +60,9 @@
     <Compile Include="Lvl1.xaml.cs">
       <DependentUpon>Lvl1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Start.xaml.cs">
       <DependentUpon>Start.xaml</DependentUpon>
     </Compile>
@@ -79,6 +82,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Start.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -127,6 +134,10 @@
     <Resource Include="res\omulet.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="res\dialogulelev.txt" />
+    <Resource Include="res\dialogulcipri.txt" />
+    <Resource Include="res\Cipripoza.jpg" />
+    <Resource Include="res\Elevpoza.jpg" />
     <Content Include="res\cezarel1.jfif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

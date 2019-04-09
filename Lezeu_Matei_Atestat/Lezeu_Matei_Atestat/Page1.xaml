@@ -1,0 +1,22 @@
+﻿<Page x:Class="Lezeu_Matei_Atestat.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Lezeu_Matei_Atestat"
+      mc:Ignorable="d" 
+      d:DesignHeight="1000" d:DesignWidth="1200"
+      Title="Page1">
+
+    <Grid>
+        <Canvas HorizontalAlignment="Left" Height="1000" Background="Black" VerticalAlignment="Top" Width="1200" Margin="10,0,-10,0">
+            <Image x:Name="Cipri" Source="/res/Cipripoza.jpg" Height="400
+                   " Width="350" Canvas.Left="144" Canvas.Top="386"/>
+            <Image x:Name="Elev" Source="/res/Elevpoza.jpg" Height="400" Width="350" Canvas.Left="748" Canvas.Top="386"/>
+            <TextBox x:Name="GraiCipri" Height="155" FontSize="30" TextWrapping="Wrap" Text="GASCA SUGE" Width="320" Canvas.Left="218" Canvas.Top="192" TextChanged="GraiCipri_TextChanged"/>
+            <TextBox x:Name="GraiElev" Height="154" FontSize="30" TextWrapping="Wrap" Text="PULA" Width="320" Canvas.Left="668" Canvas.Top="192"/>
+
+        </Canvas>
+
+    </Grid>
+</Page>
