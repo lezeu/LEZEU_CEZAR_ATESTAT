@@ -139,6 +139,11 @@
     <Resource Include="res\Cipripoza.jpg" />
     <Resource Include="res\Elevpoza.jpg" />
     <Content Include="res\cezarel1.jfif" />
+    <Resource Include="res\prf1A.jpg" />
+    <Resource Include="res\prf1D.jpg" />
+    <Resource Include="res\prf1W.jpg" />
+    <Resource Include="res\range.jpg" />
+    <Resource Include="res\prf1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

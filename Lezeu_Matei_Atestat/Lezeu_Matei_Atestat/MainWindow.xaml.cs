@@ -32,17 +32,16 @@ namespace Lezeu_Matei_Atestat
             timer.Start();
             frame.Content = new Page1();
         }
-        public void tick(object sender , EventArgs e)
+        public void tick(object sender, EventArgs e)
         {
-            //if(additionalCode.update == true)
-            //{
-            //    if(additionalCode.lvl ==1)
-            //    {
-            //        frame.Content = new Lvl1() ;
-            //        additionalCode.update = false;
-            //    }
-            //}
-
+            if(additionalCode.update == true)
+            {
+                if(additionalCode.lvl ==1)
+                {
+                    frame.Content = new Lvl1() ;
+                    additionalCode.update = false;
+                }
+            }
         }
     }
 }
