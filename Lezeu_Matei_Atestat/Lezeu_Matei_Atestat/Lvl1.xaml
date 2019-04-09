@@ -5,10 +5,21 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Lezeu_Matei_Atestat"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1000" d:DesignWidth="1200"
       Title="Lvl1" ShowsNavigationUI="False">
 
     <Grid>
-        
+        <Canvas HorizontalAlignment="Left" Height="1000" Background="White" VerticalAlignment="Top" Width="1200">
+            <Image x:Name="om" Height="100" Width="100" Canvas.Top="890" Canvas.Left="1090" Source="/res/omulet.jpg" />
+            <Image x:Name="inamic_1" Height="100" Width="100" Canvas.Top="421" Canvas.Left="933" Source="/res/prf1W.jpg" Stretch="Fill"/>
+            <Image x:Name="range_1" Height="100" Width="100" Canvas.Top="321" Canvas.Left="933" Source="/res/range.jpg" Stretch="Fill"/>
+            <Image x:Name="inamic_2" Height="100" Width="100" Canvas.Top="535" Canvas.Left="751" Source="res/prf1W.jpg" Stretch="Fill"/>
+            <Image x:Name="inamic_3" Height="100" Width="100" Canvas.Top="290" Canvas.Left="433" Source="res/prf1W.jpg" Stretch="Fill"/>
+            <Image x:Name="inamic_4" Height="100" Width="100" Canvas.Top="560" Canvas.Left="265" Source="res/prf1W.jpg" Stretch="Fill"/>
+            <Image x:Name="range_2" Height="100" Width="100" Canvas.Top="435" Canvas.Left="751" Source="res/range.jpg" Stretch="Fill"/>
+            <Image x:Name="range_3" Height="100" Width="100" Canvas.Top="190" Canvas.Left="433" Source="res/range.jpg" Stretch="Fill"/>
+            <Image x:Name="range_4" Height="100" Width="100" Canvas.Top="460" Canvas.Left="265" Source="res/range.jpg" Stretch="Fill"/>
+        </Canvas>
+
     </Grid>
 </Page>

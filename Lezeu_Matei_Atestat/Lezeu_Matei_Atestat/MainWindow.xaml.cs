@@ -30,18 +30,19 @@ namespace Lezeu_Matei_Atestat
             timer.Interval = TimeSpan.FromMilliseconds(1);
             timer.Tick += new EventHandler(tick);
             timer.Start();
-            frame.Content = new Start(additionalCode);
+            frame.Content = new Lvl1();
         }
-        public void tick(object sender , EventArgs e)
+        public void tick(object sender, EventArgs e)
         {
-            if(additionalCode.update == true)
-            {
-                if(additionalCode.lvl ==1)
-                {
-                    frame.Content = new Lvl1() ;
-                    additionalCode.update = false;
-                }
-            }
+            //if (additionalCode.update == true)
+            //{
+            //    if (additionalCode.lvl == 1)
+            //    {
+            //        frame.Content = new Lvl1();
+            //        additionalCode.update = false;
+            //    }
+            //}
+
         }
     }
 }
