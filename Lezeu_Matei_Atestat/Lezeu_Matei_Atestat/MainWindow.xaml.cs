@@ -30,7 +30,7 @@ namespace Lezeu_Matei_Atestat
             timer.Interval = TimeSpan.FromMilliseconds(1);
             timer.Tick += new EventHandler(tick);
             timer.Start();
-            frame.Content = new Page1();
+            frame.Content = new Lvl1();
         }
         public void tick(object sender, EventArgs e)
         {

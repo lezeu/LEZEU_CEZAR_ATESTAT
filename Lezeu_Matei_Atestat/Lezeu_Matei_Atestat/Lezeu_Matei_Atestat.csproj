@@ -134,6 +134,9 @@
     <Resource Include="res\omulet.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="res\OmDreapta.jpg" />
+    <Resource Include="res\OmStanga.jpg" />
+    <Resource Include="res\omuletw.jpg" />
     <Resource Include="res\dialogulelev.txt" />
     <Resource Include="res\dialogulcipri.txt" />
     <Resource Include="res\Cipripoza.jpg" />
@@ -143,7 +146,7 @@
     <Resource Include="res\prf1D.jpg" />
     <Resource Include="res\prf1W.jpg" />
     <Resource Include="res\range.jpg" />
-    <Resource Include="res\prf1.jpg" />
+    <Resource Include="res\prf1S.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,16 +9,17 @@
       Title="Lvl1" ShowsNavigationUI="False">
 
     <Grid>
-        <Canvas HorizontalAlignment="Left" Height="1000" Background="White" VerticalAlignment="Top" Width="1200">
-            <Image x:Name="om" Height="100" Width="100" Canvas.Top="890" Canvas.Left="1090" Source="/res/omulet.jpg" />
-            <Image x:Name="inamic_1" Height="100" Width="100" Canvas.Top="421" Canvas.Left="933" Source="/res/prf1W.jpg" Stretch="Fill"/>
-            <Image x:Name="range_1" Height="100" Width="100" Canvas.Top="321" Canvas.Left="933" Source="/res/range.jpg" Stretch="Fill"/>
-            <Image x:Name="inamic_2" Height="100" Width="100" Canvas.Top="535" Canvas.Left="751" Source="res/prf1W.jpg" Stretch="Fill"/>
-            <Image x:Name="inamic_3" Height="100" Width="100" Canvas.Top="290" Canvas.Left="433" Source="res/prf1W.jpg" Stretch="Fill"/>
-            <Image x:Name="inamic_4" Height="100" Width="100" Canvas.Top="560" Canvas.Left="265" Source="res/prf1W.jpg" Stretch="Fill"/>
-            <Image x:Name="range_2" Height="100" Width="100" Canvas.Top="435" Canvas.Left="751" Source="res/range.jpg" Stretch="Fill"/>
-            <Image x:Name="range_3" Height="100" Width="100" Canvas.Top="190" Canvas.Left="433" Source="res/range.jpg" Stretch="Fill"/>
-            <Image x:Name="range_4" Height="100" Width="100" Canvas.Top="460" Canvas.Left="265" Source="res/range.jpg" Stretch="Fill"/>
+        <Canvas x:Name="cv" HorizontalAlignment="Left" Height="1000" Background="White" VerticalAlignment="Top" Width="1200">
+            <Image x:Name="om" Height="100" Width="100" Canvas.Top="861" Canvas.Left="1100" Source="/res/omulet.jpg" />
+            <Image x:Name="prof1" Height="100" Width="100" Canvas.Top="1320" Canvas.Left="947" Source="/res/prf1W.jpg" Stretch="Fill"/>
+            <Image x:Name="prof2" Height="100" Width="100" Canvas.Top="264" Canvas.Left="361" Source="res/prf1W.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+
+            </Image>
+            <Image x:Name="prof4" Height="100" Width="100" Canvas.Top="263" Canvas.Left="1461" Source="res/prf1W.jpg" Stretch="Fill"/>
+            <Image x:Name="prof3" Height="100" Width="100" Canvas.Left="537" Source="res/prf1W.jpg" Stretch="Fill" Canvas.Top="10"/>
+            <Rectangle x:Name="wall1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="837" Stroke="Black" VerticalAlignment="Top" Width="99" Canvas.Left="701" Canvas.Top="163"/>
+            <Rectangle x:Name="wall2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="100" Stroke="Black" VerticalAlignment="Top" Width="439" Canvas.Left="361" Canvas.Top="163"/>
+            <Rectangle x:Name="wall3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="549" Stroke="Black" VerticalAlignment="Top" Width="103" Canvas.Left="361" Canvas.Top="163"/>
         </Canvas>
 
     </Grid>
