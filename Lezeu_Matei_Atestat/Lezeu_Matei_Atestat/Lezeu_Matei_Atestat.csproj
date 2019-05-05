@@ -57,6 +57,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AdditionalCode.cs" />
+    <Compile Include="Box.xaml.cs">
+      <DependentUpon>Box.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Lvl1.xaml.cs">
       <DependentUpon>Lvl1.xaml</DependentUpon>
     </Compile>
@@ -66,6 +69,10 @@
     <Compile Include="Start.xaml.cs">
       <DependentUpon>Start.xaml</DependentUpon>
     </Compile>
+    <Page Include="Box.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Lvl1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -134,6 +141,7 @@
     <Resource Include="res\omulet.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="res\yoloo.JPG" />
     <Resource Include="res\OmDreapta.jpg" />
     <Resource Include="res\OmStanga.jpg" />
     <Resource Include="res\omuletw.jpg" />
@@ -141,6 +149,10 @@
     <Resource Include="res\dialogulcipri.txt" />
     <Resource Include="res\Cipripoza.jpg" />
     <Resource Include="res\Elevpoza.jpg" />
+    <Resource Include="res\Boxing-Ring-Drawing.png" />
+    <Resource Include="res\black.jpg" />
+    <Resource Include="res\MATEI.jpg" />
+    <Resource Include="res\blue.jpg" />
     <Content Include="res\cezarel1.jfif" />
     <Resource Include="res\prf1A.jpg" />
     <Resource Include="res\prf1D.jpg" />

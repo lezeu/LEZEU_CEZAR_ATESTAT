@@ -13,8 +13,8 @@
             <Image x:Name="Cipri" Source="/res/Cipripoza.jpg" Height="400
                    " Width="350" Canvas.Left="144" Canvas.Top="386"/>
             <Image x:Name="Elev" Source="/res/Elevpoza.jpg" Height="400" Width="350" Canvas.Left="748" Canvas.Top="386"/>
-            <TextBox x:Name="GraiCipri" Height="155" FontSize="30" TextWrapping="Wrap" Text="GASCA SUGE" Width="320" Canvas.Left="218" Canvas.Top="192" TextChanged="GraiCipri_TextChanged"/>
-            <TextBox x:Name="GraiElev" Height="154" FontSize="30" TextWrapping="Wrap" Text="PULA" Width="320" Canvas.Left="668" Canvas.Top="192"/>
+            <TextBox x:Name="GraiCipri" Height="154" FontSize="30" TextWrapping="Wrap" Text="" Width="320" Canvas.Left="190" Canvas.Top="146" TextChanged="GraiCipri_TextChanged"/>
+            <TextBox x:Name="GraiElev" Height="154" FontSize="30" TextWrapping="Wrap" Text="" Width="320" Canvas.Left="724" Canvas.Top="146"/>
 
         </Canvas>
 

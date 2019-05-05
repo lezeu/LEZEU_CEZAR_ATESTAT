@@ -1,0 +1,20 @@
+﻿<Window x:Class="Lezeu_Matei_Atestat.Box"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lezeu_Matei_Atestat"
+        mc:Ignorable="d"
+        Title="Box" Height="450" Width="800">
+    <Grid>
+        <Canvas HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792">
+            <Image x:Name="image" Source="/res/Boxing-Ring-Drawing.png" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792"/>
+            <Image x:Name="eu" Source="/res/60T90-Black.jpg" Stretch="Fill" HorizontalAlignment="Left" Height="213" VerticalAlignment="Top" Width="112" Canvas.Left="79" Canvas.Top="106"/>
+            <Image x:Name="adversar" Source="/res/MATEI.jpg" Stretch="Fill" HorizontalAlignment="Left" Height="213" VerticalAlignment="Top" Width="112" Canvas.Left="531" Canvas.Top="117"/>
+
+        </Canvas>
+        <Rectangle Fill="Transparent" x:Name ="alin" Height="399" Stroke="Black" VerticalAlignment="Top" Width="69" Margin="0,10,723,0"/>
+        <Rectangle Fill="Transparent" HorizontalAlignment="Left" Height="399" Stroke="Black" VerticalAlignment="Top" Width="77" Margin="715,10,0,0"/>
+
+    </Grid>
+</Window>
