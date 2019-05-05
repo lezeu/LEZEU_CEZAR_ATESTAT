@@ -141,6 +141,17 @@
     <Resource Include="res\omulet.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="res\prf1A.PNG" />
+    <Resource Include="res\prf1D.PNG" />
+    <Resource Include="res\prf1S.PNG" />
+    <Resource Include="res\prf1W.PNG" />
+    <Resource Include="res\OmStanga.PNG" />
+    <Resource Include="res\omulet.PNG" />
+    <Resource Include="res\omuletw.PNG" />
+    <Resource Include="res\OmDreapta.PNG" />
+    <Resource Include="res\patrat.PNG" />
+    <Resource Include="res\zid2.PNG" />
+    <Resource Include="res\zid1.PNG" />
     <Resource Include="res\yoloo.JPG" />
     <Resource Include="res\OmDreapta.jpg" />
     <Resource Include="res\OmStanga.jpg" />

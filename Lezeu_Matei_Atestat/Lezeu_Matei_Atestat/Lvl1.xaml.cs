@@ -38,7 +38,7 @@ namespace Lezeu_Matei_Atestat
             {
                 BitmapImage bmp = new BitmapImage();
                 bmp.BeginInit(); // incepe init la bmp
-                bmp.UriSource = new Uri("/res/OmStanga.jpg", UriKind.Relative); // schimba img source in bmp
+                bmp.UriSource = new Uri("/res/OmStanga.PNG", UriKind.Relative); // schimba img source in bmp
                 bmp.EndInit();
                 om.Source = bmp;//updateza source cu bmp
                 if (Left(om) == Left(wall1) + wall1.Width && Top(om) > Top(wall1) || Left(om) == Left(wall3) + wall3.Width && Top(om) > Top(wall3) && Top(om) < Top(wall3) + wall3.Height)
@@ -58,7 +58,7 @@ namespace Lezeu_Matei_Atestat
             {
                 BitmapImage bmp = new BitmapImage();
                 bmp.BeginInit(); // incepe init la bmp
-                bmp.UriSource = new Uri("/res/omuletw.jpg", UriKind.Relative); // schimba img source in bmp
+                bmp.UriSource = new Uri("/res/omuletw.PNG", UriKind.Relative); // schimba img source in bmp
                 bmp.EndInit();
                 om.Source = bmp;//updateza source cu bmp
 
@@ -79,7 +79,7 @@ namespace Lezeu_Matei_Atestat
             {
                 BitmapImage bmp = new BitmapImage();
                 bmp.BeginInit(); // incepe init la bmp
-                bmp.UriSource = new Uri("/res/OmDreapta.jpg", UriKind.Relative); // schimba img source in bmp
+                bmp.UriSource = new Uri("/res/OmDreapta.PNG", UriKind.Relative); // schimba img source in bmp
                 bmp.EndInit();
                 om.Source = bmp;//updateza source cu bmp
 
@@ -102,7 +102,7 @@ namespace Lezeu_Matei_Atestat
             {
                 BitmapImage bmp = new BitmapImage();
                 bmp.BeginInit(); // incepe init la bmp
-                bmp.UriSource = new Uri("/res/omulet.jpg", UriKind.Relative); // schimba img source in bmp
+                bmp.UriSource = new Uri("/res/omulet.PNG", UriKind.Relative); // schimba img source in bmp
                 bmp.EndInit();
                 om.Source = bmp;//updateza source cu bmp
                 if (Top(om)+om.Height>Top(wall2) && (Left(om)>Left(wall2) && Left(om)<Left(wall2)+wall2.Width)
@@ -176,7 +176,7 @@ namespace Lezeu_Matei_Atestat
             if (Top(prof1) > 55)
             {
                 bmp.BeginInit(); // incepe init la bmp
-                bmp.UriSource = new Uri("/res/prf1W.jpg", UriKind.Relative); // schimba img source in bmp
+                bmp.UriSource = new Uri("/res/prf1W.PNG", UriKind.Relative); // schimba img source in bmp
                 bmp.EndInit();
                 prof1.Source = bmp;//updateza source cu bmp
                 SetTop(prof1, Top(prof1) - 5);
@@ -187,7 +187,7 @@ namespace Lezeu_Matei_Atestat
                 if (Left(prof1) < cv.Width)
                 {
                     bmp.BeginInit();
-                    bmp.UriSource = new Uri("/res/prf1D.jpg", UriKind.Relative);
+                    bmp.UriSource = new Uri("/res/prf1D.PNG", UriKind.Relative);
                     bmp.EndInit();
                     prof1.Source = bmp;
                     SetLeft(prof1, Left(prof1) + speed);
@@ -207,7 +207,7 @@ namespace Lezeu_Matei_Atestat
             if (Left(prof2) < Left(wall1))
             {
                 bmp.BeginInit(); // incepe init la bmp
-                bmp.UriSource = new Uri("/res/prf1D.jpg", UriKind.Relative); // schimba img source in bmp
+                bmp.UriSource = new Uri("/res/prf1D.PNG", UriKind.Relative); // schimba img source in bmp
                 bmp.EndInit();
                 prof2.Source = bmp;//updateza source cu bmp
                 SetLeft(prof2, Left(prof2) + speed);
@@ -231,7 +231,7 @@ namespace Lezeu_Matei_Atestat
             if (Top(prof3) < 50 && stage2 == false)
             {
                 bmp.BeginInit(); // incepe init la bmp
-                bmp.UriSource = new Uri("/res/prf1S.jpg", UriKind.Relative); // schimba img source in bmp
+                bmp.UriSource = new Uri("/res/prf1S.PNG", UriKind.Relative); // schimba img source in bmp
                 bmp.EndInit();
                 prof3.Source = bmp;//updateza source cu bmp
                 SetTop(prof3, Top(prof3) + speed);
@@ -242,7 +242,7 @@ namespace Lezeu_Matei_Atestat
                 if (Left(prof3) > 125 && stage2 == false)
                 {
                     bmp.BeginInit(); // incepe init la bmp
-                    bmp.UriSource = new Uri("/res/prf1A.jpg", UriKind.Relative); // schimba img source in bmp
+                    bmp.UriSource = new Uri("/res/prf1A.PNG", UriKind.Relative); // schimba img source in bmp
                     bmp.EndInit();
                     prof3.Source = bmp;//updateza source cu bmp
                     SetLeft(prof3, Left(prof3) - speed);
@@ -254,7 +254,7 @@ namespace Lezeu_Matei_Atestat
                     if (Top(prof3) >= 50 && Left(prof3) <= 125 && Top(prof3) < 815)
                     {
                         bmp.BeginInit(); // incepe init la bmp
-                        bmp.UriSource = new Uri("/res/prf1S.jpg", UriKind.Relative); // schimba img source in bmp
+                        bmp.UriSource = new Uri("/res/prf1S.PNG", UriKind.Relative); // schimba img source in bmp
                         bmp.EndInit();
                         prof3.Source = bmp;//updateza source cu bmp
                         SetTop(prof3, Top(prof3) + speed);
@@ -265,7 +265,7 @@ namespace Lezeu_Matei_Atestat
                         if (Left(prof3) < 513)
                         {
                             bmp.BeginInit(); // incepe init la bmp
-                            bmp.UriSource = new Uri("/res/prf1D.jpg", UriKind.Relative); // schimba img source in bmp
+                            bmp.UriSource = new Uri("/res/prf1D.PNG", UriKind.Relative); // schimba img source in bmp
                             bmp.EndInit();
                             prof3.Source = bmp;//updateza source cu bmp
                             SetLeft(prof3, Left(prof3) + speed);
@@ -276,7 +276,7 @@ namespace Lezeu_Matei_Atestat
                             if (Top(prof3) > 163)
                             {
                                 bmp.BeginInit(); // incepe init la bmp
-                                bmp.UriSource = new Uri("/res/prf1W.jpg", UriKind.Relative); // schimba img source in bmp
+                                bmp.UriSource = new Uri("/res/prf1W.PNG", UriKind.Relative); // schimba img source in bmp
                                 bmp.EndInit();
                                 prof3.Source = bmp;//updateza source cu bmp
                                 SetTop(prof3, Top(prof3) - speed);
@@ -300,7 +300,7 @@ namespace Lezeu_Matei_Atestat
             if (Left(prof4) > 805)
             {
                 bmp.BeginInit(); // incepe init la bmp
-                bmp.UriSource = new Uri("/res/prf1A.jpg", UriKind.Relative); // schimba img source in bmp
+                bmp.UriSource = new Uri("/res/prf1A.PNG", UriKind.Relative); // schimba img source in bmp
                 bmp.EndInit();
                 prof4.Source = bmp;//updateza source cu bmp
                 SetLeft(prof4, Left(prof4) - speed);
@@ -311,7 +311,7 @@ namespace Lezeu_Matei_Atestat
                 if (Top(prof4) > -110)
                 {
                     bmp.BeginInit(); // incepe init la bmp
-                    bmp.UriSource = new Uri("/res/prf1W.jpg", UriKind.Relative); // schimba img source in bmp
+                    bmp.UriSource = new Uri("/res/prf1W.PNG", UriKind.Relative); // schimba img source in bmp
                     bmp.EndInit();
                     prof4.Source = bmp;//updateza source cu bmp
                     SetTop(prof4, Top(prof4) - speed);
