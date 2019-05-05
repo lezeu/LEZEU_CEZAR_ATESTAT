@@ -8,13 +8,12 @@
         Title="Box" Height="450" Width="800">
     <Grid>
         <Canvas HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792">
-            <Image x:Name="image" Source="/res/Boxing-Ring-Drawing.png" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792"/>
+            <Image x:Name="image"  Source="/res/Boxing-Ring-Drawing.png" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792"/>
             <Image x:Name="eu" Source="/res/black.jpg" Stretch="Fill" HorizontalAlignment="Left" Height="213" VerticalAlignment="Top" Width="112" Canvas.Left="79" Canvas.Top="106"/>
             <Image x:Name="adversar" Source="/res/MATEI.jpg" Stretch="Fill" HorizontalAlignment="Left" Height="213" VerticalAlignment="Top" Width="112" Canvas.Left="531" Canvas.Top="117"/>
+            <ProgressBar x:Name="veataLUI" Height="33" Width="132" Canvas.Left="543" Canvas.Top="19" ValueChanged="ProgressBar_ValueChanged" Value="100"/>
 
         </Canvas>
-        <Rectangle Fill="Transparent" x:Name ="alin" Height="399" Stroke="Black" VerticalAlignment="Top" Width="69" Margin="0,10,723,0"/>
-        <Rectangle Fill="Transparent" HorizontalAlignment="Left" Height="399" Stroke="Black" VerticalAlignment="Top" Width="77" Margin="715,10,0,0"/>
 
     </Grid>
 </Window>

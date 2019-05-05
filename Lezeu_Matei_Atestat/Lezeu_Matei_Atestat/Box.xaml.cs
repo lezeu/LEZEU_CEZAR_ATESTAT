@@ -31,28 +31,51 @@ namespace Lezeu_Matei_Atestat
             
         }
 
-        int cont=0, def=0;
+        int cont=0, def=0, culoare=0;
+
+        private void ProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+           
+        }
 
         private void timer_tick(object sender, EventArgs e)
         {
             if (Keyboard.IsKeyDown(Key.D))
             {
-                Canvas.SetLeft(eu, Canvas.GetLeft(eu) + 3);
+                if (Canvas.GetLeft(eu) <= image.Width - 140)
+                {
+                    Canvas.SetLeft(eu, Canvas.GetLeft(eu) + 3);
+                }
             }
 
             if (Keyboard.IsKeyDown(Key.A))
             {
-                Canvas.SetLeft(eu, Canvas.GetLeft(eu) - 3);
+                
+                if(Canvas.GetLeft(eu)>=20)
+                {
+                    Canvas.SetLeft(eu, Canvas.GetLeft(eu) - 3);
+                }
+
             }
+
+            if (Canvas.GetLeft(eu) + eu.Width >= Canvas.GetLeft(adversar))
+              
 
             if (Keyboard.IsKeyDown(Key.K))
             {
-                BitmapImage bmp1 = new BitmapImage();
-                bmp1.BeginInit();
-                bmp1.UriSource = new Uri("/res/blue1.jpg", UriKind.RelativeOrAbsolute);
-                bmp1.EndInit();
-                eu.Source = bmp1;
                 cont = 0;
+                BitmapImage bmp = new BitmapImage();
+                bmp.BeginInit();
+                bmp.UriSource = new Uri("/res/blue1.jpg", UriKind.RelativeOrAbsolute);
+                bmp.EndInit();
+                eu.Source = bmp;
+                if (Canvas.GetLeft(eu) + eu.Width >= Canvas.GetLeft(adversar))
+                    {
+                        veataLUI.Value -= 1;
+
+                    }
+
+
             }
             if (Keyboard.IsKeyDown(Key.J))
             {
@@ -73,6 +96,7 @@ namespace Lezeu_Matei_Atestat
                 def = 0;
             }
             cont++;
+            culoare = 2;
             if (cont==10)
             {
                 BitmapImage bmp = new BitmapImage();
@@ -81,6 +105,8 @@ namespace Lezeu_Matei_Atestat
                 bmp.EndInit();
                 eu.Source = bmp;
             }
+
+            
         }
     }
 }
