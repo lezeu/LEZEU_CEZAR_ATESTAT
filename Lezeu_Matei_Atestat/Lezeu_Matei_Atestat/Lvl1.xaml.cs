@@ -41,10 +41,18 @@ namespace Lezeu_Matei_Atestat
                 bmp.UriSource = new Uri("/res/OmStanga.jpg", UriKind.Relative); // schimba img source in bmp
                 bmp.EndInit();
                 om.Source = bmp;//updateza source cu bmp
-                if (Canvas.GetLeft(om) > 0 )
+                if (Left(om) == Left(wall1) + wall1.Width && Top(om) > Top(wall1) || Left(om) == Left(wall3) + wall3.Width && Top(om) > Top(wall3) && Top(om) < Top(wall3) + wall3.Height)
                 {
-                    Canvas.SetLeft(om, Canvas.GetLeft(om) - 4);
+
                 }
+                else
+                {
+                    if (Canvas.GetLeft(om) > 0)
+                    {
+                        Canvas.SetLeft(om, Canvas.GetLeft(om) - 5);
+                    }
+                }
+
             }
             if (Keyboard.IsKeyDown(Key.W))
             {
@@ -53,10 +61,18 @@ namespace Lezeu_Matei_Atestat
                 bmp.UriSource = new Uri("/res/omuletw.jpg", UriKind.Relative); // schimba img source in bmp
                 bmp.EndInit();
                 om.Source = bmp;//updateza source cu bmp
+
+                if ((Left(om) > Left(wall3) && Left(om) < Left(wall3) + wall3.Width && Top(om) < 710 && Top(om) >Top(wall2))
+                    ||(Left(om)+om.Width < Left(wall3)+wall3.Width && Left(om)+om.Width > Left(wall3) && Top(om) < 710 && Top(om) > Top(wall2)))
+                {
+
+                }
+                else
                 if (Canvas.GetTop(om) > 0)
                 {
-                    Canvas.SetTop(om, Canvas.GetTop(om) - 4);
+                    Canvas.SetTop(om, Canvas.GetTop(om) - 5);
                 }
+
 
             }
             if (Keyboard.IsKeyDown(Key.D))
@@ -67,31 +83,20 @@ namespace Lezeu_Matei_Atestat
                 bmp.EndInit();
                 om.Source = bmp;//updateza source cu bmp
 
-                if (Left(om) >= Left(wall1) + wall1.Width)
+                if (Left(om) + om.Height == Left(wall1) && Top(om) > Top(wall1) || Left(om) + om.Height == Left(wall3) && Top(om) > Top(wall3) && Top(om) < Top(wall3) + wall3.Height)
                 {
-                    if (Canvas.GetLeft(om) + om.Width < 1200)
-                    {
-                        Canvas.SetLeft(om, Canvas.GetLeft(om) + 4);
-                    }
+
                 }
                 else
                 {
-                    if (Left(om) + om.Width <= Left(wall3) && Top(om) < Top(wall3) || Top(om) >=Top(wall3) + wall3.Height)
+                    if (Canvas.GetLeft(om) + om.Height < 1200)
                     {
-                        if (Canvas.GetLeft(om) + om.Width < 1200)
-                        {
-                            Canvas.SetLeft(om, Canvas.GetLeft(om) + 4);
-                        }
-                    }
-                    else
-                          if (Left(om) + om.Width <= Left(wall1) && Top(om) < Top(wall1) || Top(om)  >= Top(wall1) + wall1.Height)
-                    {
-                        if (Canvas.GetLeft(om) + om.Width < 1200)
-                        {
-                            Canvas.SetLeft(om, Canvas.GetLeft(om) + 4);
-                        }
+                        Canvas.SetLeft(om, Canvas.GetLeft(om) + 5);
                     }
                 }
+
+
+
             }
             if (Keyboard.IsKeyDown(Key.S))
             {
@@ -100,10 +105,20 @@ namespace Lezeu_Matei_Atestat
                 bmp.UriSource = new Uri("/res/omulet.jpg", UriKind.Relative); // schimba img source in bmp
                 bmp.EndInit();
                 om.Source = bmp;//updateza source cu bmp
-                if (Canvas.GetTop(om) + om.Height < 1000)
+                if (Top(om)+om.Height>Top(wall2) && (Left(om)>Left(wall2) && Left(om)<Left(wall2)+wall2.Width)
+                    ||(Left(om)+om.Width<Left(wall2)+wall2.Width && Left(om)+om.Width>Left(wall2) && Top(om)+om.Width>Top(wall2)))
+                //Left(om) > Left(wall3) && Left(om) < Left(wall3) + wall3.Width && Top(om) < 710 && Top(om) >Top(wall2)
                 {
-                    Canvas.SetTop(om, Canvas.GetTop(om) + 4);
+
                 }
+                else
+                {
+                    if (Canvas.GetTop(om) + om.Height < 1000)
+                    {
+                        Canvas.SetTop(om, Canvas.GetTop(om) + 5);
+                    }
+                }
+
 
             }
             prof1Behaviour();
