@@ -31,7 +31,7 @@ namespace Lezeu_Matei_Atestat
             
         }
 
-        int cont=0;
+        int cont=0, def=0;
 
         private void timer_tick(object sender, EventArgs e)
         {
@@ -44,13 +44,14 @@ namespace Lezeu_Matei_Atestat
             {
                 Canvas.SetLeft(eu, Canvas.GetLeft(eu) - 3);
             }
+
             if (Keyboard.IsKeyDown(Key.K))
             {
-                BitmapImage bmp = new BitmapImage();
-                bmp.BeginInit();
-                bmp.UriSource = new Uri("/res/blue.jpg", UriKind.RelativeOrAbsolute);
-                bmp.EndInit();
-                eu.Source = bmp;
+                BitmapImage bmp1 = new BitmapImage();
+                bmp1.BeginInit();
+                bmp1.UriSource = new Uri("/res/blue1.jpg", UriKind.RelativeOrAbsolute);
+                bmp1.EndInit();
+                eu.Source = bmp1;
                 cont = 0;
             }
             if (Keyboard.IsKeyDown(Key.J))
@@ -60,14 +61,16 @@ namespace Lezeu_Matei_Atestat
                 bmp.UriSource = new Uri("/res/yoloo.JPG", UriKind.RelativeOrAbsolute);
                 bmp.EndInit();
                 eu.Source = bmp;
+                def = 1;
             }
-            if (Keyboard.IsKeyUp(Key.J))
+            if (Keyboard.IsKeyUp(Key.J) && def ==1)
             {
                 BitmapImage bmp = new BitmapImage();
                 bmp.BeginInit();
                 bmp.UriSource = new Uri("/res/black.jpg", UriKind.RelativeOrAbsolute);
                 bmp.EndInit();
                 eu.Source = bmp;
+                def = 0;
             }
             cont++;
             if (cont==10)

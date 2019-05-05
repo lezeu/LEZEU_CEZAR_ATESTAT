@@ -9,7 +9,7 @@
     <Grid>
         <Canvas HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792">
             <Image x:Name="image" Source="/res/Boxing-Ring-Drawing.png" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792"/>
-            <Image x:Name="eu" Source="/res/60T90-Black.jpg" Stretch="Fill" HorizontalAlignment="Left" Height="213" VerticalAlignment="Top" Width="112" Canvas.Left="79" Canvas.Top="106"/>
+            <Image x:Name="eu" Source="/res/black.jpg" Stretch="Fill" HorizontalAlignment="Left" Height="213" VerticalAlignment="Top" Width="112" Canvas.Left="79" Canvas.Top="106"/>
             <Image x:Name="adversar" Source="/res/MATEI.jpg" Stretch="Fill" HorizontalAlignment="Left" Height="213" VerticalAlignment="Top" Width="112" Canvas.Left="531" Canvas.Top="117"/>
 
         </Canvas>
